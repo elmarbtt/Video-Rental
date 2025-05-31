@@ -1,0 +1,60 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="saveOrUpdateProd" method="saveOrUpdate" class="com.elmar.view.ProductAction">
+			<result name="success" type="redirect">listProd</result>
+		</action>
+		<action name="UpdateProd" method="Update" class="com.elmar.view.ProductAction">
+			<result name="success" type="redirect">listProd</result>
+		</action>
+		<action name="listProd" method="prepare" class="com.elmar.view.ProductAction">
+			<result name="success">/product.jsp</result>
+		</action>
+		<!-- <action name="ProductAction" method="list" class="com.elmar.view.ProductAction">
+			<result name="success">product.jsp</result>
+		</action> -->
+		
+		<action name="listProdCat" method="listCat" class="com.elmar.view.ProductAction">
+			<result name="success">/product.jsp</result>
+		</action>
+		
+		<action name="editProd" method="edit" class="com.elmar.view.ProductAction">
+			<result name="success">/Update.jsp</result>
+		</action>
+		<action name="removeProd" method="delete" class="com.elmar.view.ProductAction">
+			<result name="success" type="redirect">listProd</result>
+		</action>
+		<action name="searchProd" method="search" class="com.elmar.view.ProductAction">
+			<result name="success">search.jsp</result>
+			</action>	
+			<action name="listUser" method="list" class="com.elmar.view.UserAction">
+			<result name="success" >/UserRegister.jsp</result>
+			</action>
+			<action name="viewRole" method="listRoleId" class="com.elmar.view.UserAction">
+			<result name="success"> /UserRoles.jsp</result>
+			</action>	
+		<action name="saveOrUpdateUser" method="saveOrUpdate" class="com.elmar.view.UserAction">
+			<result name="success" type="redirect">listUser</result>
+			</action>	
+			<!-- I had to an listUser action in order to add a user to the database
+			  -->
+			<action name="UpdateUser" method="Update" class="com.elmar.view.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		   </action>
+			<action name="editUser" method="edit" class="com.elmar.view.UserAction">
+			<result name="success">/UpdateUser.jsp</result>
+		</action>
+		<action name="removeUser" method="delete" class="com.elmar.view.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		   </action>
+		
+		
+		   
+		   
+		   
+		   
+		</package>
+</struts>
