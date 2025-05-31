@@ -1,0 +1,22 @@
+# Java build output
+*.class
+bin/
+
+# Eclipse project files
+.settings/
+.classpath
+.project
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: exclude any libraries if stored in WebContent/WEB-INF/lib
+# WebContent/WEB-INF/lib/
+
+# If using IntelliJ, uncomment the following
+# .idea/
+# *.iml
